@@ -358,7 +358,7 @@ export default class LDAP {
     }
 
     if (this.options.group_filter_group_member_attribute !== '') {
-      const format_value = ldapUser[this.options.group_filter_group_member_format];
+      const format_value = ldapUser[this.options.group_filter_group_member_format].replaceAll("\\\\\\\\", "\\\\");
       if (format_value) {
         filter.push(`(${this.options.group_filter_group_member_attribute}=${format_value})`);
       }
