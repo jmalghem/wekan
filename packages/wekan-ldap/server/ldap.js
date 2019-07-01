@@ -361,7 +361,7 @@ export default class LDAP {
       log_debug(ldapUser[this.options.group_filter_group_member_format]);
       const format_value = ldapUser[this.options.group_filter_group_member_format];
       if (format_value) {
-        filter.push(`(${this.options.group_filter_group_member_attribute}=${ldapjs.parseFilter(format_value).toString()})`);
+        filter.push(`(${this.options.group_filter_group_member_attribute}=${format_value})`);
       }
     }
 
