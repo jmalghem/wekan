@@ -358,9 +358,10 @@ export default class LDAP {
     }
 
     if (this.options.group_filter_group_member_attribute !== '') {
-      const format_value = ldapUser[this.options.group_filter_group_member_format].replaceAll("\\\\\\\\", "\\\\");
+      log_debug(ldapUser[this.options.group_filter_group_member_format]);
+      const format_value = ldapUser[this.options.group_filter_group_member_format];
       if (format_value) {
-        filter.push(`(${this.options.group_filter_group_member_attribute}=${format_value})`);
+        filter.push(`(${this.options.group_filter_group_member_attribute}=${ldapjs.parseFilter(format_value).toString()})`);
       }
     }
 
@@ -437,11 +438,12 @@ export default class LDAP {
     Object.keys(values._raw).forEach((key) => {
       const value = values._raw[key];
 
-      if (!['thumbnailPhoto', 'jpegPhoto'].includes(key)) {
+      if (!['thumbnailPhoto', 'jpegPhoto', 'dn'].includes(key)) {
         if (value instanceof Buffer) {
           values[key] = value.toString();
         } else {
           values[key] = value;
+	 }
         }
       }
     });
