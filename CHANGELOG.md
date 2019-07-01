@@ -1,3 +1,70 @@
+# v2.96 2019-07-01 Wekan release
+
+This release removes the following features, that were added at Wekan v2.95:
+
+- [Remove RELAX MODE and DARK MODE](https://github.com/wekan/wekan/commit/8477e94f3b8f531a4209f49758200009d274c1cf),
+  because [they changed look of all existing boards](https://github.com/wekan/wekan/issues/1149#issuecomment-507255114).
+  At some later Wekan release they will be added back as separate themes
+  that can be selected, without changing existing boards.
+  Thanks to chirrut2 and xet7.
+
+Thanks to above GitHub users for their contributions and translators for their translations.
+
+# v2.95 2019-07-01 Wekan release
+
+This release adds the following new features, thanks to xet7:
+
+- [Make list header add card + button more black, to make it more visible](https://github.com/wekan/wekan/commit/b260d05a8b2f87c29dd998d42103d1220b20cc08). 
+- [On minicard, make comment icon and number of comments have red color
+  on white rounded background, so it is more visible when there is comments on card](https://github.com/wekan/wekan/commit/bbc68309af0029f2bc4194db4c7e79689f888ea4).
+- [Make card description text more visible with black borders and more white text area](https://github.com/wekan/wekan/commit/48ebc5f11745b125ce01d08d60e2d8e3a9419a5f).
+
+and adds the following [themes to board background colors](https://github.com/wekan/wekan/commit/c04292e98832e3aa7952e8a7858d47a853f40aad), thanks to xet7:
+
+- RELAX MODE, so when green background selected, list background is light green.
+- [DARK MODE](https://github.com/wekan/wekan/issues/1149), when dark backgroud color selected. Please test and send color visibility fixes as pull requests.
+- In RELAX MODE and DARK MODE, [hide card fields: received, start, due, end, members, requested, assigned](https://github.com/wekan/wekan/commit/b42ecb7948ad194433dc4460305174965106a751).
+
+Thanks to above GitHub users for their contributions and translators for their translations.
+
+# v2.94 2019-06-30 Wekan RasPi3 Meteor 1.8.1 release
+
+This release adds the following new features, thanks to xet7:
+
+- [Wekan now availabe for RasPi3, arm64 servers etc](https://github.com/wekan/wekan/wiki/Raspberry-Pi).
+  See [meteor-1.8 branch ChangeLog](https://github.com/wekan/wekan/blob/meteor-1.8/CHANGELOG.md) for changes.
+  For Docker, see docker-compose.yml at https://github.com/wekan/wekan meteor-1.8 branch.
+
+Currently Snap and Sandstorm are at Meteor 1.6 still, in this master branch. Sometime later all platforms move to meteor-1.8 brach when builds work.
+
+# v2.93 2019-06-28 Wekan release
+
+This release fixes the following bugs:
+
+- [LDAP: Check if email attribute is an array, that has many email addresses](https://github.com/wekan/wekan/pull/2519).
+  Thanks to tdemaret and xet7.
+
+Thanks to above GitHub users for their contributions and translators for their translations.
+
+# v2.92 2019-06-27 Wekan release
+
+This release fixes the following bugs:
+
+- [Fix Outgoing Webhook messages for Checlists, Checklist Items, Card comments, Add/Remove CustomField to board](https://github.com/wekan/wekan/commit/5283ba9ebbedf11540ffef1d4d87891c5ce9efc7).
+  Not yet fixed is Outgoing Webhook message about setting CustomField value.
+  Thanks to xet7.
+
+Thanks to above GitHub users for their contributions and translators for their translations.
+
+# v2.91 2019-06-27 Wekan release
+
+This release fixes the following bugs:
+
+- [Fix Attachment Outgoing Webhook missing list and swimlane name](https://github.com/wekan/wekan/commit/6a2f120d00b5ce9089ad2e12d01edb1ed9f94800).
+  Thanks to xet7.
+
+Thanks to above GitHub users for their contributions and translators for their translations.
+
 # v2.90 2019-06-21 Wekan release
 
 This release reverts the following Sandstorm changes:
